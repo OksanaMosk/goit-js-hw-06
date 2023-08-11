@@ -1,12 +1,18 @@
-const logEl = document.querySelector('.login-form');
-logEl.addEventListener('submit', handler);
-function handler(event) {
-    if (condition) {
-       alert(message) 
-    } else {
-        alert(' ')
-    }
-    event.preventDefault;
-}
+const formEl = document.querySelector(".login-form");
+const submitHandler = (event) => {
+  event.preventDefault();
+  const { email, password } = event.currentTarget.elements;
 
-console.dir(message);
+  const info = {
+    email: email.value,
+    password: password.value,
+  };
+
+  if (password.value == "") {
+    alert("Заповни усі поля");
+  } else {
+    console.log(info);
+  }
+  formEl.reset();
+};
+formEl.addEventListener("submit", submitHandler);

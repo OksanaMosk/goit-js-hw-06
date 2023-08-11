@@ -27,7 +27,7 @@ function render() {
   const allGallery = images
     .map(
       (item) =>
-        `<li><img width = 500px height = 300px src = "${item.url}" alt = "${item.alt}"/></li>`
+        `<li><img width = 400px height = 250px src = "${item.url}" alt = "${item.alt}"/></li>`
     )
     .join("");
   listGallery.insertAdjacentHTML("afterbegin", allGallery);
