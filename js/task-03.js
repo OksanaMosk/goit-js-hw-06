@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-function render() {
+function render(images) {
   const listGallery = document.querySelector(".gallery");
   listGallery.style.display = "flex";
   listGallery.style.flexDirection = "row";
@@ -27,12 +27,12 @@ function render() {
   const allGallery = images
     .map(
       (item) =>
-        `<li><img width = 400px height = 250px src = "${item.url}" alt = "${item.alt}"/></li>`
+        `<li><img width = '400' height = '250' src = "${item.url}" alt = "${item.alt}"/></li>`
     )
     .join("");
   listGallery.insertAdjacentHTML("afterbegin", allGallery);
 }
-render();
+render(images);
 
 /*const titleGalery = document.createElement('h1');
 titleGalery.textContent = `${Галерея тварин}`;

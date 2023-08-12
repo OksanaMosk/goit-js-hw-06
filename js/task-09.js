@@ -6,8 +6,9 @@ const clickHandler = (event) => {
       .toString(16)
       .padStart(6, 0)}`;
   }
-  document.body.style.backgroundColor = getRandomHexColor();
-  spanEl.textContent = getRandomHexColor();
+  const numberColor = (document.body.style.backgroundColor =
+    getRandomHexColor());
+  spanEl.textContent = numberColor;
   console.log(event);
 };
 btnEl.addEventListener("click", clickHandler);
